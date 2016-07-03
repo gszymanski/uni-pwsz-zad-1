@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="236.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLDocumentController">
+	<children>
+		<Label fx:id="inLabel" layoutX="10.0" layoutY="10.0" text="Temperatura" />
+		<TextField fx:id="inTextField" layoutX="10.0" layoutY="30.0" prefWidth="280.0" text="100" />
+		<Label fx:id="outLabel" layoutX="10.0" layoutY="62.0" text="Wynik" />
+		<TextField fx:id="outTextField" layoutX="10.0" layoutY="81.0" prefWidth="280.0" text="" />
+		<RadioButton fx:id="inCelsius" layoutX="20.0" layoutY="120.0" mnemonicParsing="false" selected="true" text="Celsius">
+			<toggleGroup>
+				<ToggleGroup fx:id="inMode" />
+			</toggleGroup>
+		</RadioButton>
+		<RadioButton fx:id="inFahrenheit" layoutX="20.0" layoutY="145.0" mnemonicParsing="false" text="Fahrenheit" toggleGroup="$inMode" />
+		<RadioButton fx:id="inKelvin" layoutX="20.0" layoutY="170.0" mnemonicParsing="false" text="Kelvin" toggleGroup="$inMode" />
+		<RadioButton fx:id="outCelsius" layoutX="180.0" layoutY="120.0" mnemonicParsing="false" text="Celsius">
+			<toggleGroup>
+				<ToggleGroup fx:id="outMode" />
+			</toggleGroup>
+		</RadioButton>
+		<RadioButton fx:id="outFahrenheit" layoutX="180.0" layoutY="145.0" mnemonicParsing="false" selected="true" text="Fahrenheit" toggleGroup="$outMode" />
+		<RadioButton fx:id="outKelvin" layoutX="180.0" layoutY="170.0" mnemonicParsing="false" text="Kelvin" toggleGroup="$outMode" />
+		<Button fx:id="button" layoutX="90.0" layoutY="200.0" prefWidth="120.0" mnemonicParsing="false" onAction="#buttonClick" text="Przelicz" />
+	</children>
+</AnchorPane>
